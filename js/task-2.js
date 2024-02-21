@@ -28,7 +28,16 @@ const images = [
   },
 ];
 
+
 const list = document.querySelector('.gallery');
+list.style.listStyleType = "none";
+list.style.width = "1440px";
+list.style.backgroundColor = "#fff";
+list.style.padding = "100px 156px";
+list.style.display = "flex";
+list.style.flexWrap = "wrap";
+list.style.rowGap = "48px";
+list.style.columnGap = "24px";
 
 images.forEach(function(image) {
   const item = document.createElement("li");
