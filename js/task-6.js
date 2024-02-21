@@ -4,10 +4,25 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+const body = document.querySelector('body');
+body.style.background = "#fff";
+
+const control = document.querySelector('#controls');
+control.style.backgroundColor = "#F6F6FE";
+control.style.padding = "32px";
+control.style.width = "486px";
+control.style.margin = "0 auto";
+
 const createBtn = document.querySelector('button[data-create]');
 const destroyBtn = document.querySelector('button[data-destroy]');
 const text = document.querySelector('input[type="number"]');
 const boxForBoxes = document.querySelector('#boxes');
+boxForBoxes.style.display = "flex";
+boxForBoxes.style.gap = "16px";
+boxForBoxes.style.padding = "32px";
+boxForBoxes.style.backgroundColor = "#F6F6FE";
+boxForBoxes.style.width = "486px";
+boxForBoxes.style.margin = "16px auto";
 
 function createBoxes(amount) {
 
