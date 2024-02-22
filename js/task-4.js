@@ -20,3 +20,8 @@ form.addEventListener('submit', event => {
 
     form.reset();
 })
+
+
+
+const button = document.querySelector('button[type="submit"]');
+button.classList.add('login');

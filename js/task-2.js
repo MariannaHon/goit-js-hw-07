@@ -30,24 +30,12 @@ const images = [
 
 
 const list = document.querySelector('.gallery');
-list.style.listStyleType = "none";
-list.style.width = "1440px";
-list.style.backgroundColor = "#fff";
-list.style.padding = "100px 156px";
-list.style.display = "flex";
-list.style.flexWrap = "wrap";
-list.style.rowGap = "48px";
-list.style.columnGap = "24px";
 
-images.forEach(function(image) {
-  const item = document.createElement("li");
-  item.className = "gallery-item";
-  const photo = document.createElement("img");
-  photo.src = image.url;
-  photo.alt = image.alt;
-  photo.width = "360";
-  photo.height = "300";
-  photo.className = "picture";
-  item.appendChild(photo);
-  list.appendChild(item);
-});
+const filling = images
+  .map(image =>
+    `<li class = "gallery-item">
+      <img class = "picture" src = "${image.url}" alt = "${image.alt}" width = "360" height = "300"/>
+    </li>`)
+  .join("");
+
+list.insertAdjacentHTML("beforeend", filling);
