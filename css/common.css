@@ -226,6 +226,7 @@ label>input {
 
 #boxes {
   display: flex;
+  flex-wrap: wrap;
   border-radius: 8px;
   padding: 32px;
   width: 496px;
@@ -234,9 +235,10 @@ label>input {
 }
 
 .input-boxes {
+  text-align: center;
   border: 1px solid #808080;
   border-radius: 8px;
-  padding: 8px 70px;
+  padding: 8px 16px;
   width: 150px;
   height: 40px;
   margin-right: 16px;
